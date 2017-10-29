@@ -1,0 +1,98 @@
+// compile with: lessc --clean-css --source-map less/styles.less style.css
+@import 'meta';
+@import 'variables';
+@import 'mixins';
+@import 'basic-html';
+@import 'footer';
+
+.container {
+	width: 100%;
+	max-width: 800px;
+	@media screen and (max-width: @breakpoint-desktop) {
+		margin: .5em auto 0 auto;
+		padding: 1em 1em .5em 1em;
+	}
+	@media screen and (min-width: @breakpoint-desktop) {
+		margin: 2em auto @font-size-menu auto;
+	}
+}
+
+.site-title {
+	@media screen and (max-width: @breakpoint-desktop) {
+		margin-bottom: .5em;
+	}
+	@media screen and (min-width: @breakpoint-desktop) {
+		margin-bottom: 2em;
+	}
+	a {
+		font-family: 'Cantata One', serif;
+		@media screen and (max-width: @breakpoint-desktop) {
+			font-size: @font-size-title-small;
+		}
+		@media screen and (min-width: @breakpoint-desktop) {
+			font-size: @font-size-title;
+		}
+		font-weight: 400;
+		color: @text-color;
+		line-height: .8em;
+		&:hover {
+			color: @accent-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.body {
+	display: flex;
+	@media screen and (max-width: @breakpoint-desktop) {
+		flex-direction: column;
+	}
+	@media screen and (min-width: @breakpoint-desktop) {
+		flex-direction: row;
+	}
+	.menu-main {
+		@media screen and (max-width: @breakpoint-desktop) {
+			margin-bottom: .5em;
+		}
+		@media screen and (min-width: @breakpoint-desktop) {
+			width: 220px;
+			min-width: 220px;
+		}
+		.menu {
+			display: flex;
+			@media screen and (max-width: @breakpoint-desktop) {
+				font-size: @font-size-menu-big;
+				flex-direction: row; // justify-content: space-between;
+				flex-wrap: wrap;
+			}
+			@media screen and (min-width: @breakpoint-desktop) {
+				font-size: @font-size-menu;
+				flex-direction: column;
+			}
+			line-height: 130%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			.menu-item {
+				a {
+					color: @text-color;
+					font-weight: 600;
+					&:hover {
+						color: @text-color-dark;
+					}
+					@media screen and (max-width: @breakpoint-desktop) {
+						margin-right: .5em;
+					}
+				}
+				&.current-menu-item {
+					a {
+						color: @accent-color;
+					}
+				}
+			}
+		}
+	}
+	.content {
+		@import 'content';
+	}
+}
