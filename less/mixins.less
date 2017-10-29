@@ -1,12 +1,17 @@
 .link-button() {
 	display: inline-block;
-    border: 2px solid @accent-color;
-    border-radius: @border-radius-size;
+	border: 2px solid @accent-color;
+	border-radius: @border-radius-size;
 	padding: .65em .5em .5em .5em;
 	font-weight: 400;
-	&:hover {
+	&:hover, &:focus:hover {
 		border: 2px solid @accent-color-dark;
 		background-color: @accent-color-dark;
+		color: @site-background-color;
+		cursor: pointer;
+	}
+	&:focus {
+		background-color: @accent-color-light;
 		color: @site-background-color;
 	}
 }

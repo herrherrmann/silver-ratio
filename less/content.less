@@ -16,11 +16,13 @@ small {
 	font-size: .7em;
 }
 
-// blockquote {
-// 	margin: @padding-small 0;
-// 	padding: @padding-small;
-// 	background-color: @color-background-light;
-// }
+blockquote {
+	margin: 1em 0;
+	padding: 0 1em;
+	color: @text-color;
+	border-left: 1px solid @text-color-light;
+}
+
 a:hover img {
 	filter: brightness(90%);
 }
@@ -51,6 +53,13 @@ img {
 	margin: 0 auto;
 }
 
+iframe {
+	display: block;
+	max-width: 100%;
+	border: none;
+	margin-bottom: .5em;
+}
+
 .post {
 	margin-bottom: 3em;
 	.title {
@@ -63,7 +72,7 @@ img {
 		}
 	}
 	.meta {
-		font-size: .8em;
+		font-size: @font-size-small;
 		color: @text-color-light;
 		margin-bottom: 1em;
 	}
@@ -71,6 +80,44 @@ img {
 
 .more-link {
 	.link-button();
+}
+
+.info {
+	font-size: @font-size-small;
+	margin: 1em 0;
+	padding: .65em .8em .5em .8em;
+	border: 1px solid @text-color;
+	border-radius: @border-radius-size;
+}
+
+form {
+	input,
+	textarea {
+		font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+		font-weight: 400;
+		@media screen and (max-width: @breakpoint-desktop) {
+			font-size: 22px;
+		}
+		@media screen and (min-width: @breakpoint-desktop) {
+			font-size: 17px;
+		}
+		line-height: 1.25em;
+		color: @text-color;
+		max-width: 100%;
+		padding: .5em;
+		border: 1px solid @text-color-light;
+	}
+
+	input:focus,
+	textarea:focus {
+		outline: none;
+		border-color: @accent-color;
+		transition: border-color 0.3s;
+	}
+
+	input[type=submit] {
+		.link-button();
+	}
 }
 
 .pagination {
@@ -91,10 +138,39 @@ img {
 	}
 }
 
+.gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.gallery-item {
+		width: 20%;
+		.gallery-icon {
+			img {
+				border-radius: @border-radius-size;
+			}
+		}
+		.gallery-caption {
+			font-weight: 300;
+			font-size: @font-size-small;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+		}
+	}
+	br {
+		display: none; // nobody likes you.
+		&:last-of-type {
+			display: block;
+		}
+	}
+}
+
 .wp-caption {
 	max-width: 100%;
 	.wp-caption-text {
-		font-weight: 300;
+		font-size: @font-size-small;
+		font-weight: 400;
 		text-align: center;
 		color: @text-color-lighter;
 		margin-top: 0;

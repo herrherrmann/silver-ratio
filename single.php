@@ -36,8 +36,8 @@
 
 
 <nav class="pagination">
-	<?php previous_post_link( '<div class="previous">%link</div>', __( 'Previous post', 'silver-ratio' ) . ' %title' ); ?>
-	<?php next_post_link(     '<div class="next">%link</div>',     __( 'Next post', 'silver-ratio' ) . ' %title' ); ?>
+	<?php previous_post_link( '<div class="previous">%link</div>', __( 'Previous post', 'silver-ratio' ) ); ?>
+	<?php next_post_link(     '<div class="next">%link</div>',     __( 'Next post', 'silver-ratio' ) ); ?>
 </nav>
 
 <?php comments_template(); ?>
