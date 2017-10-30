@@ -4,10 +4,10 @@ body {
 	background-color: @site-background-color;
 	color: @text-color;
 	@media screen and (max-width: @breakpoint-desktop) {
-		font-size: 22px;
+		font-size: @font-size-mobile;
 	}
 	@media screen and (min-width: @breakpoint-desktop) {
-		font-size: 17px;
+		font-size: @font-size-regular;
 	}
 	font-weight: 400;
 	line-height: 1.25em;
