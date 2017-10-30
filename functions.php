@@ -51,6 +51,14 @@ function silver_ratio_editor_style() {
 }
 add_action( 'init', 'silver_ratio_editor_style' );
 
+/* Include page content with show_page_content function. */
+function show_page_content( $path ) {
+	$post = get_page_by_path( $path );
+	$content = apply_filters( 'the_content', $post->post_content );
+	echo $content;
+}
+add_action( 'init', 'show_page_content' );
+
 /* Highlight active custom post page in menu. */
 add_filter( 'nav_menu_css_class', 'silver_ratio_menu_classes', 10, 2 );
 function silver_ratio_menu_classes( $classes , $item ) {
