@@ -65,15 +65,18 @@
 				font-size: @font-size-menu-big;
 				flex-direction: row; // justify-content: space-between;
 				flex-wrap: wrap;
+				border-bottom: 1px solid @text-color;
+				margin: 0 0 .5em 0;
+				padding: 0 0 .5em 0;
 			}
 			@media screen and (min-width: @breakpoint-desktop) {
 				font-size: @font-size-menu;
 				flex-direction: column;
+				margin: 0;
+				padding: 0;
 			}
 			line-height: 130%;
 			list-style: none;
-			margin: 0;
-			padding: 0;
 			.menu-item {
 				a {
 					color: @text-color;
