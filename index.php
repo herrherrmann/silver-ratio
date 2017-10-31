@@ -3,7 +3,7 @@
 <?php if ( is_tag() ) {
 	$tag = get_queried_object();
 	single_tag_title(
-		'<div class="info first">' . __( 'Currently selected tag:', 'silver-ratio' ) . ' <strong>'
+		'<div class="info">' . __( 'Currently selected tag:', 'silver-ratio' ) . ' <strong>'
 	);
 	echo '</strong></a></div>';
 }?>
