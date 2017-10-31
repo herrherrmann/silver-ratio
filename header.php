@@ -19,7 +19,7 @@
 			</a>
 		</header>
 		<div class="body">
-			<nav class="menu-main" aria-label="Main Menu">
+			<nav class="sidebar" aria-label="Main Menu">
 				<?php wp_nav_menu( array(
 					'theme_location' => 'main-menu',
 					'container'      => false

@@ -1,0 +1,78 @@
+.site-title {
+	@media screen and (max-width: @breakpoint-desktop) {
+		margin-bottom: .5em;
+	}
+	@media screen and (min-width: @breakpoint-desktop) {
+		margin-bottom: 2em;
+	}
+	a {
+		font-family: 'Cantata One', serif;
+		@media screen and (max-width: @breakpoint-desktop) {
+			font-size: @font-size-title-small;
+		}
+		@media screen and (min-width: @breakpoint-desktop) {
+			font-size: @font-size-title;
+		}
+		font-weight: 400;
+		color: @text-color;
+		line-height: .8em;
+		&:hover {
+			color: @accent-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.body .sidebar {
+	@media screen and (max-width: @breakpoint-desktop) {
+		margin-bottom: .5em;
+	}
+	@media screen and (min-width: @breakpoint-desktop) {
+		width: 220px;
+		min-width: 220px;
+	}
+	.menu {
+		display: flex;
+		@media screen and (max-width: @breakpoint-desktop) {
+			font-size: @font-size-menu-big;
+			flex-direction: row; // justify-content: space-between;
+			flex-wrap: wrap;
+			border-bottom: 1px solid @text-color;
+			margin: 0 0 .5em 0;
+			padding: 0 0 .5em 0;
+		}
+		@media screen and (min-width: @breakpoint-desktop) {
+			font-size: @font-size-menu;
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+		}
+		line-height: 130%;
+		list-style: none;
+		.menu-item {
+			a {
+				color: @text-color;
+				font-weight: 600;
+				&:hover {
+					color: @text-color-dark;
+				}
+				@media screen and (max-width: @breakpoint-desktop) {
+					margin-right: .5em;
+				}
+			}
+			&.current-menu-item {
+				a {
+					color: @accent-color;
+				}
+			}
+		}
+	}
+	.widget {
+		padding: 0 2em 0 0;
+		list-style: none;
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+	}
+}
