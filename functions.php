@@ -39,6 +39,15 @@ function silver_ratio_menus() {
 }
 add_action( 'init', 'silver_ratio_menus' );
 
+function silver_ratio_widgets() {
+	register_sidebar( array(
+        'name' => __( 'Main Sidebar', 'silver-ratio' ),
+        'id' => 'sidebar',
+        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'silver-ratio' ),
+    ) );
+}
+add_action( 'widgets_init', 'silver_ratio_widgets' );
+
 function silver_ratio_style() {
 	wp_enqueue_style( 'style-main', get_stylesheet_uri() );
 }

@@ -24,5 +24,6 @@
 					'theme_location' => 'main-menu',
 					'container'      => false
 				)); ?>
+				<?php if ( dynamic_sidebar('sidebar') ) : else : endif; ?>
 			</nav>
 			<main class="content">
