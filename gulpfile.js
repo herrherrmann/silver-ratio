@@ -41,8 +41,14 @@ gulp.task('editor-styles', [], () => {
 		.pipe(gulp.dest('./'));
 });
 
+gulp.task('watch-styles', () => {
+	gulp.watch('./less/**/*.less', ['styles', 'editor-styles'])
+});
+
 gulp.task('watch', () => {
-	gulp.watch('./less/**/*.less', ['styles', 'editor-styles']);
+	return runSequence(
+		['clean'], ['styles', 'editor-styles'], ['watch-styles']
+	);
 });
 
 gulp.task('_browser-reload', cb => {
