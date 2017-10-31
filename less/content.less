@@ -81,6 +81,26 @@ iframe {
 		font-size: @font-size-small;
 		color: @text-color-light;
 		margin-bottom: 1em;
+		.date {
+			margin-right: 1em;
+		}
+		.tags {
+			a {
+				display: inline-block;
+				white-space: nowrap;
+				font-weight: 400;
+				padding: .2em .8em .03em;
+				background-color: @text-color-lighter;
+				color: @site-background-color;
+				border-radius: 1em;
+				margin-right: .5em;
+				margin-bottom: .2em;
+				&:hover {
+					background-color: @text-color-light;
+					color: @site-background-color;
+				}
+			}
+		}
 	}
 }
 

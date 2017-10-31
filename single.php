@@ -13,9 +13,8 @@
 		<span class="date">
 			<?php echo get_the_date(); ?>
 		</span>
-		—
 		<span class="tags">
-			<?php the_tags( ' ', ', ', ''); ?>
+			<?php the_tags('', ''); ?>
 		</span>
 	</div>
 
