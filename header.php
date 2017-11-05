@@ -13,7 +13,7 @@
 <body <?php body_class(); ?>>
 	<div class="container">
 		<header class="site-title">
-			<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?> — <?php bloginfo('description'); ?>" rel="home">
+			<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?> &mdash; <?php bloginfo('description'); ?>" rel="home">
 				Herr
 				<br>Herrmann
 			</a>
@@ -27,3 +27,4 @@
 				<?php if ( dynamic_sidebar('sidebar') ) : else : endif; ?>
 			</nav>
 			<main class="content">
+				<div class="content-inner">

@@ -1,19 +1,22 @@
 p {
-	margin: 0 0 .75em 0;
+	margin: 0 0 .75em 0; // &:last-of-type {
+	// 	margin: 0;
+	// }
 }
 
-// p:first-of-type {
-// 	margin-top: 0;
-// }
-// p:last-of-type {
-// 	margin-bottom: 0;
-// }
 // strong {
 // 	font-style: normal;
 // 	font-weight: 700;
 // }
 small {
 	font-size: .7em;
+}
+
+ul {
+	list-style: inside;
+	margin: 0 0 .75em 0;
+	padding: 0 0 0 1em;
+	line-height: 1.5em;
 }
 
 blockquote {
@@ -23,15 +26,14 @@ blockquote {
 	border-left: 1px solid @text-color-light;
 }
 
-a:hover img {
-	filter: brightness(90%);
-}
-
-a img {
-	border-radius: @border-radius-size;
+a {
+	&:hover img {
+		filter: brightness(90%);
+	}
 }
 
 img {
+	border-radius: @border-radius-size;
 	max-width: 100%;
 	height: auto;
 	margin: 0;
@@ -40,14 +42,21 @@ img {
 		&:first-of-type {
 			margin: 0 0 1em 0;
 		}
+		&.alignleft,
+		&.alignright {
+			display: block;
+			margin: 1em auto;
+		}
 	}
-	&.alignright {
-		float: right;
-		margin-left: 1em;
-	}
-	&.alignleft {
-		float: left;
-		margin-right: 1em;
+	@media screen and (min-width: @breakpoint-desktop) {
+		&.alignleft {
+			float: left;
+			margin-right: 1em;
+		}
+		&.alignright {
+			float: right;
+			margin-left: 1em;
+		}
 	}
 	&.aligncenter {
 		margin: 1em auto;
@@ -62,11 +71,17 @@ img {
 iframe {
 	display: block;
 	max-width: 100%;
+	margin-bottom: .75em;
 	border: none;
-	margin-bottom: .5em;
+	border-radius: @border-radius-size;
 }
 
 .post, .software {
+	&.sticky {
+		background-color: @text-color-lighter;
+		padding: .5em;
+		border-radius: @border-radius-size;
+	}
 	margin-bottom: 3em;
 	.title {
 		a {
@@ -131,14 +146,18 @@ form {
 		line-height: 1.25em;
 		color: @text-color;
 		max-width: 100%;
-		padding: .5em;
+		padding: .65em .8em .5em .8em;
 		border: 1px solid @text-color-light;
+		&:focus,
+		&:focus {
+			outline: none;
+			border-color: @accent-color;
+		} // Indicate invalid and not-empty fields:
 	}
-	input:focus,
-	textarea:focus {
-		outline: none;
-		border-color: @accent-color;
-		transition: border-color 0.3s;
+	input:invalid:not([value=""]),
+	input:-moz-ui-invalid:not([value=""]) {
+		border-color: red;
+		color: red;
 	}
 	input[type=submit] {
 		.link-button();
@@ -199,5 +218,37 @@ form {
 		text-align: center;
 		color: @text-color-lighter;
 		margin-top: 0;
+	}
+}
+
+// Text meant only for screen readers.
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	&:focus {
+		background-color: #eee;
+		clip: auto !important;
+		clip-path: none;
+		color: #444;
+		display: block;
+		font-size: 1em;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000;
+		/* Above WP toolbar. */
 	}
 }
