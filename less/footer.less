@@ -1,7 +1,9 @@
+@footer-margin: .75em;
+
 .footer {
 	margin-top: 1em;
 	border-top: 1px solid @text-color-lighter;
-	padding-top: 1em;
+	padding-top: @footer-margin;
 	.menu {
 		display: flex;
 		flex-direction: row;
@@ -10,7 +12,7 @@
 		margin: 0;
 		padding: 0;
 		.menu-item {
-			margin-right: 1em;
+			margin-right: @footer-margin;
 			@media screen and (max-width: @breakpoint-desktop) {
 				margin-bottom: .5em;
 			}
@@ -22,7 +24,7 @@
 				}
 			}
 			&.divider {
-				padding-left: 1em;
+				padding-left: @footer-margin;
 				border-left: 1px solid @text-color-lighter;
 			}
 		}
