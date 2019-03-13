@@ -1,18 +1,12 @@
 p {
-	margin: 0 0 .75em 0; // &:last-of-type {
-	// 	margin: 0;
-	// }
+	margin: 0 0 .75em 0;
 }
 
-// strong {
-// 	font-style: normal;
-// 	font-weight: 700;
-// }
 small {
 	font-size: .7em;
 }
 
-ul {
+ul:not(.wp-block-gallery) {
 	list-style: inside;
 	margin: 0 0 .75em 0;
 	padding: 0 0 0 1em;
@@ -33,7 +27,6 @@ a {
 }
 
 img {
-	border-radius: @border-radius-size;
 	max-width: 100%;
 	height: auto;
 	margin: 0;
