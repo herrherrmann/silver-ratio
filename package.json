@@ -1,11 +1,10 @@
 {
 	"name": "silver-ratio",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "A simple WordPress theme.",
 	"main": "gulpfile.js",
 	"scripts": {
 		"start": "gulp watch",
-		"eslint": "eslint --init",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Sebastian Herrmann <sebastian@herrherrmann.net>",
@@ -32,8 +31,5 @@
 		"gulp-load": "^0.1.1",
 		"gulp-sourcemaps": "^2.6.5",
 		"run-sequence": "^2.2.1"
-	},
-	"resolutions": {
-		"natives": "1.1.6"
 	}
 }
