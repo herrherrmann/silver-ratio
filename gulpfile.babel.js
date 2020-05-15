@@ -15,7 +15,7 @@ export function clean() {
 		"./style.css",
 		"./style.css.map",
 		"./style-editor.css",
-		"./style-editor.css.map"
+		"./style-editor.css.map",
 	]);
 }
 
@@ -24,11 +24,7 @@ export function styles() {
 		.src("./less/styles.less")
 		.pipe(gulpSourcemaps.init())
 		.pipe(gulpLess())
-		.pipe(
-			gulpAutoprefixer({
-				browsers: ["last 3 versions"]
-			})
-		)
+		.pipe(gulpAutoprefixer())
 		.pipe(gulpConcat("style.css"))
 		.pipe(gulpCleancss())
 		.pipe(gulpSourcemaps.write("."))
@@ -40,11 +36,7 @@ export function editorStyles() {
 		.src("./less/style-editor.less")
 		.pipe(gulpSourcemaps.init())
 		.pipe(gulpLess())
-		.pipe(
-			gulpAutoprefixer({
-				browsers: ["last 3 versions"]
-			})
-		)
+		.pipe(gulpAutoprefixer())
 		.pipe(gulpConcat("style-editor.css"))
 		.pipe(gulpCleancss())
 		.pipe(gulpSourcemaps.write("."))
