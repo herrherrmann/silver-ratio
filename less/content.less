@@ -7,12 +7,12 @@ small {
 }
 
 ul:not(.blocks-gallery-grid) {
-	list-style: inside;
+	list-style-type: disc;
 	margin: 0 0 .75em 0;
-	padding: 0 0 0 .1em;
-	line-height: 1.5em;
+	padding: 0 0 0 0.9em;
+	line-height: @line-height-default;
 	ul {
-		padding: 0 0 0 1em;
+		padding: 0 0 0 0.9em;
 	}
 }
 
@@ -80,10 +80,14 @@ iframe {
 		border-radius: @border-radius-size;
 	}
 	margin-bottom: 3em;
+	&:last-of-type {
+		margin-bottom: 1em;
+	}
 	.title {
+		line-height: @line-height-small;
 		a {
 			color: @text-color;
-			font-weight: 400;
+			font-weight: @font-weight-normal;
 			&:hover {
 				color: @text-color-dark;
 			}
@@ -92,20 +96,21 @@ iframe {
 	.meta {
 		font-size: @font-size-small;
 		color: @text-color-light;
+		line-height: @line-height-small;
 		margin-bottom: 1em;
 		.date {
-			margin-right: 1em;
+			margin-right: .5em;
 		}
 		.tags {
 			a {
 				display: inline-block;
 				white-space: nowrap;
-				font-weight: 400;
-				padding: .2em .8em .03em;
+				font-weight: @font-weight-normal;
+				padding: .2em .8em;
 				background-color: @text-color-lighter;
 				color: @site-background-color;
 				border-radius: 1em;
-				margin-right: .5em;
+				margin-right: .3em;
 				margin-bottom: .2em;
 				&:hover {
 					background-color: @text-color-light;
@@ -123,7 +128,7 @@ iframe {
 .info {
 	font-size: @font-size-small;
 	margin: 1em 0;
-	padding: .65em .8em .5em .8em;
+	padding: .65em .8em;
 	border: 1px solid @text-color;
 	border-radius: @border-radius-size;
 }
@@ -131,8 +136,8 @@ iframe {
 form {
 	input,
 	textarea {
-		font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-		font-weight: 400;
+		font-family: 'Chivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+		font-weight: @font-weight-normal;
 		@media screen and (max-width: @breakpoint-desktop) {
 			font-size: @font-size-mobile;
 			width: 100%;
@@ -140,10 +145,10 @@ form {
 		@media screen and (min-width: @breakpoint-desktop) {
 			font-size: @font-size-regular;
 		}
-		line-height: 1.25em;
+		line-height: @line-height-small;
 		color: @text-color;
 		max-width: 100%;
-		padding: .65em .8em .5em .8em;
+		padding: .65em .8em;
 		border: 1px solid @text-color-light;
 		&:focus,
 		&:focus {
@@ -192,7 +197,7 @@ form {
 			}
 		}
 		.gallery-caption {
-			font-weight: 300;
+			font-weight: @font-weight-normal;
 			font-size: @font-size-small;
 			text-align: center;
 			padding: 0;
@@ -211,9 +216,9 @@ form {
 	max-width: 100%;
 	.wp-caption-text {
 		font-size: @font-size-small;
-		font-weight: 400;
+		font-weight: @font-weight-normal;
 		text-align: center;
-		color: @text-color-lighter;
+		color: @text-color-light;
 		margin-top: 0;
 	}
 }
