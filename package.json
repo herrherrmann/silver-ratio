@@ -1,6 +1,6 @@
 {
 	"name": "silver-ratio",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "A simple WordPress theme.",
 	"main": "gulpfile.js",
 	"scripts": {
@@ -18,10 +18,10 @@
 		"defaults"
 	],
 	"devDependencies": {
-		"@babel/core": "7.9.6",
 		"@babel/cli": "7.8.4",
-		"@babel/register": "7.9.0",
+		"@babel/core": "7.9.6",
 		"@babel/preset-env": "7.9.6",
+		"@babel/register": "7.9.0",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"eslint": "^7.0.0",
