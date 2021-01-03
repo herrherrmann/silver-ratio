@@ -9,7 +9,7 @@ body {
 	@media screen and (min-width: @breakpoint-desktop) {
 		font-size: @font-size-regular;
 	}
-	font-weight: 400;
+	font-weight: @font-weight-normal;
 	line-height: @line-height-default;
 }
 
@@ -26,9 +26,12 @@ body {
 	padding: 0;
 }
 
-strong,
+strong {
+	font-weight: @font-weight-bold;
+}
+
 em {
-	font-weight: 700;
+	font-weight: @font-weight-normal;
 }
 
 h1,
@@ -38,7 +41,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Cantata One', serif;
-	font-weight: 400;
+	font-weight: @font-weight-normal;
 	line-height: @line-height-small;
 }
 
@@ -72,7 +75,7 @@ h6 {
 }
 
 a {
-	font-weight: 700;
+	font-weight: @font-weight-bold;
 	&,
 	&:visited,
 	&:link {

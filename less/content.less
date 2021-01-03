@@ -87,7 +87,7 @@ iframe {
 		line-height: @line-height-small;
 		a {
 			color: @text-color;
-			font-weight: 400;
+			font-weight: @font-weight-normal;
 			&:hover {
 				color: @text-color-dark;
 			}
@@ -105,7 +105,7 @@ iframe {
 			a {
 				display: inline-block;
 				white-space: nowrap;
-				font-weight: 400;
+				font-weight: @font-weight-normal;
 				padding: .2em .8em .03em;
 				background-color: @text-color-lighter;
 				color: @site-background-color;
@@ -137,7 +137,7 @@ form {
 	input,
 	textarea {
 		font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-		font-weight: 400;
+		font-weight: @font-weight-normal;
 		@media screen and (max-width: @breakpoint-desktop) {
 			font-size: @font-size-mobile;
 			width: 100%;
@@ -197,7 +197,7 @@ form {
 			}
 		}
 		.gallery-caption {
-			font-weight: 300;
+			font-weight: @font-weight-normal;
 			font-size: @font-size-small;
 			text-align: center;
 			padding: 0;
@@ -216,7 +216,7 @@ form {
 	max-width: 100%;
 	.wp-caption-text {
 		font-size: @font-size-small;
-		font-weight: 400;
+		font-weight: @font-weight-normal;
 		text-align: center;
 		color: @text-color-lighter;
 		margin-top: 0;
