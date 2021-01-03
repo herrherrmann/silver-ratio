@@ -34,9 +34,11 @@
 	}
 	.menu {
 		display: flex;
+		line-height: 1.4;
+		list-style: none;
 		@media screen and (max-width: @breakpoint-desktop) {
 			font-size: @font-size-menu-big;
-			flex-direction: row; // justify-content: space-between;
+			flex-direction: row;
 			flex-wrap: wrap;
 			border-bottom: 1px solid @text-color;
 			margin: 0 0 .5em 0;
@@ -48,12 +50,10 @@
 			margin: 0;
 			padding: 0;
 		}
-		line-height: 1.4;
-		list-style: none;
 		.menu-item {
 			a {
 				color: @text-color;
-				font-weight: 600;
+				font-weight: @font-weight-bold;
 				&:hover {
 					color: @text-color-dark;
 				}
