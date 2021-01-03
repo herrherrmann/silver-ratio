@@ -10,7 +10,7 @@ ul:not(.blocks-gallery-grid) {
 	list-style: inside;
 	margin: 0 0 .75em 0;
 	padding: 0 0 0 .1em;
-	line-height: 1.5em;
+	line-height: @line-height-default;
 	ul {
 		padding: 0 0 0 1em;
 	}
@@ -81,6 +81,7 @@ iframe {
 	}
 	margin-bottom: 3em;
 	.title {
+		line-height: @line-height-small;
 		a {
 			color: @text-color;
 			font-weight: 400;
@@ -92,6 +93,7 @@ iframe {
 	.meta {
 		font-size: @font-size-small;
 		color: @text-color-light;
+		line-height: @line-height-small;
 		margin-bottom: 1em;
 		.date {
 			margin-right: 1em;
@@ -140,7 +142,7 @@ form {
 		@media screen and (min-width: @breakpoint-desktop) {
 			font-size: @font-size-regular;
 		}
-		line-height: 1.25em;
+		line-height: @line-height-small;
 		color: @text-color;
 		max-width: 100%;
 		padding: .65em .8em .5em .8em;

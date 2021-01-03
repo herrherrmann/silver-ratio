@@ -1,4 +1,6 @@
 .site-title {
+	line-height: 0.8;
+
 	@media screen and (max-width: @breakpoint-desktop) {
 		margin-bottom: .5em;
 	}
@@ -7,18 +9,17 @@
 	}
 	a {
 		font-family: 'Cantata One', serif;
+		font-weight: 400;
+		color: @text-color;
+		&:hover {
+			color: @accent-color;
+			text-decoration: none;
+		}
 		@media screen and (max-width: @breakpoint-desktop) {
 			font-size: @font-size-title-small;
 		}
 		@media screen and (min-width: @breakpoint-desktop) {
 			font-size: @font-size-title;
-		}
-		font-weight: 400;
-		color: @text-color;
-		line-height: .8em;
-		&:hover {
-			color: @accent-color;
-			text-decoration: none;
 		}
 	}
 }
@@ -47,7 +48,7 @@
 			margin: 0;
 			padding: 0;
 		}
-		line-height: 130%;
+		line-height: 1.4;
 		list-style: none;
 		.menu-item {
 			a {
