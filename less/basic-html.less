@@ -92,7 +92,9 @@ a {
 		color: @accent-color-dark;
 		text-decoration: none;
 	}
-	&::selection,
+	&::selection {
+		color: @accent-color;
+	}
 	&::-moz-selection {
 		color: @accent-color;
 	}
@@ -106,7 +108,9 @@ button {
 }
 
 
-::selection,
+::selection {
+	background-color: @accent-color-lighter;
+}
 ::-moz-selection {
 	background-color: @accent-color-lighter;
 }
