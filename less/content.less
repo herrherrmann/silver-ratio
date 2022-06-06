@@ -102,7 +102,7 @@ iframe {
 	}
 	.meta {
 		font-size: @font-size-small;
-		color: @text-color-light;
+		color: @text-color;
 		line-height: @line-height-small;
 		margin-bottom: 1em;
 		.date {
@@ -114,14 +114,14 @@ iframe {
 				white-space: nowrap;
 				font-weight: @font-weight-normal;
 				padding: .2em .8em;
-				background-color: @text-color-lighter;
-				color: @site-background-color;
+				background-color: darken(@site-background-color, 5%);
+				color: @text-color;
 				border-radius: 1em;
 				margin-right: .3em;
 				margin-bottom: .2em;
 				&:hover {
-					background-color: @text-color-light;
-					color: @site-background-color;
+					background-color: darken(@site-background-color, 10%);
+					color: @text-color;
 				}
 			}
 		}
