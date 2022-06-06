@@ -233,7 +233,6 @@ form {
 // Text meant only for screen readers.
 .screen-reader-text {
 	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
 	height: 1px;
 	margin: -1px;
@@ -245,7 +244,6 @@ form {
 	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
 	&:focus {
 		background-color: #eee;
-		clip: auto !important;
 		clip-path: none;
 		color: #444;
 		display: block;
