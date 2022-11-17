@@ -18,10 +18,6 @@
 		</a>
 	</h1>
 
-	<?php if ( ! post_password_required() && ! is_attachment() && has_post_thumbnail() ) {
-		the_post_thumbnail();
-	}?>
-
 	<div class="meta">
 		<span class="date">
 			<?php echo get_the_date(); ?>
@@ -30,6 +26,10 @@
 			<?php the_tags('', ''); ?>
 		</span>
 	</div>
+
+	<?php if ( ! post_password_required() && ! is_attachment() && has_post_thumbnail() ) {
+		the_post_thumbnail();
+	}?>
 
 	<div class="content">
 		<?php the_content( __( 'Read more...', 'silver-ratio' ) ); ?>

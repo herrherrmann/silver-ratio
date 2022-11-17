@@ -30,46 +30,72 @@ code {
 	border-radius: @border-radius-size;
 }
 
+/* Images */
+img {
+	border-radius: @border-radius-size;
+	max-width: 100%;
+	height: auto;
+}
+
 a {
 	&:hover img {
 		filter: brightness(90%);
 	}
 }
 
-img {
-	border-radius: @border-radius-size;
-	max-width: 100%;
-	height: auto;
-	margin: 0;
-	@media screen and (max-width: @breakpoint-desktop) {
-		margin: 1em 0;
-		&:first-of-type {
-			margin: 0 0 1em 0;
-		}
-		&.alignleft,
-		&.alignright {
-			display: block;
-			margin: 1em auto;
-		}
-	}
-	@media screen and (min-width: @breakpoint-desktop) {
-		&.alignleft {
-			float: left;
-			margin-right: 1em;
-		}
-		&.alignright {
-			float: right;
-			margin-left: 1em;
-		}
-	}
-	&.aligncenter {
-		margin: 1em auto;
-		display: block;
-	}
+.wp-post-image {
+	margin: 0 0 1em 0;
 }
 
-.aligncenter {
-	margin: 0 auto;
+.wp-block-image {
+	margin: 1em 0;
+
+	figure {
+		&.aligncenter {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+		}
+	
+		&.alignleft {
+			float: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+
+			@media (min-width: @breakpoint-desktop) {
+				display: block;
+				width: 50%;
+				float: left;
+				margin-right: 2em;
+			}
+		}
+	
+		&.alignright {
+			float: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+
+			@media (min-width: @breakpoint-desktop) {
+				display: block;
+				width: 50%;
+				float: right;
+				margin-left: 2em;
+			}
+		}
+
+		figcaption {
+			width: 100%;
+			color: @text-color-light;
+			font-size: @font-size-small;
+			text-align: center;
+			margin: 0.5em 0 0 0;
+		}
+	}
 }
 
 iframe {
@@ -145,11 +171,11 @@ form {
 	textarea {
 		font-family: 'Chivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 		font-weight: @font-weight-normal;
-		@media screen and (max-width: @breakpoint-desktop) {
+		@media (max-width: @breakpoint-desktop) {
 			font-size: @font-size-mobile;
 			width: 100%;
 		}
-		@media screen and (min-width: @breakpoint-desktop) {
+		@media (min-width: @breakpoint-desktop) {
 			font-size: @font-size-regular;
 		}
 		line-height: @line-height-small;
