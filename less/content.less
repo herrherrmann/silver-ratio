@@ -41,7 +41,7 @@ img {
 	max-width: 100%;
 	height: auto;
 	margin: 0;
-	@media screen and (max-width: @breakpoint-desktop) {
+	@media (max-width: @breakpoint-desktop) {
 		margin: 1em 0;
 		&:first-of-type {
 			margin: 0 0 1em 0;
@@ -52,7 +52,7 @@ img {
 			margin: 1em auto;
 		}
 	}
-	@media screen and (min-width: @breakpoint-desktop) {
+	@media (min-width: @breakpoint-desktop) {
 		&.alignleft {
 			float: left;
 			margin-right: 1em;
@@ -145,11 +145,11 @@ form {
 	textarea {
 		font-family: 'Chivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 		font-weight: @font-weight-normal;
-		@media screen and (max-width: @breakpoint-desktop) {
+		@media (max-width: @breakpoint-desktop) {
 			font-size: @font-size-mobile;
 			width: 100%;
 		}
-		@media screen and (min-width: @breakpoint-desktop) {
+		@media (min-width: @breakpoint-desktop) {
 			font-size: @font-size-regular;
 		}
 		line-height: @line-height-small;
