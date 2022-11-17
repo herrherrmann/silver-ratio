@@ -3,8 +3,6 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( ! post_password_required() && ! is_attachment() ) : the_post_thumbnail(); endif; ?>
-
 	<h1 class="title">
 		<?php the_title(); ?>
 	</h1>
@@ -17,6 +15,8 @@
 			<?php the_tags('', ''); ?>
 		</span>
 	</div>
+
+	<?php if ( ! post_password_required() && ! is_attachment() ) : the_post_thumbnail(); endif; ?>
 
 	<div class="content">
 		<?php the_content(); ?>
