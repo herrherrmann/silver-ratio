@@ -11,6 +11,7 @@ ul:not(.blocks-gallery-grid) {
 	margin: 0 0 .75em 0;
 	padding: 0 0 0 0.9em;
 	line-height: var(--line-height-default);
+
 	ul {
 		padding: 0 0 0 0.9em;
 	}
@@ -57,7 +58,7 @@ a {
 			align-items: center;
 			margin: 0;
 		}
-	
+
 		&.alignleft {
 			float: none;
 			display: flex;
@@ -72,7 +73,7 @@ a {
 				margin-right: 2em;
 			}
 		}
-	
+
 		&.alignright {
 			float: none;
 			display: flex;
@@ -112,28 +113,36 @@ iframe {
 		padding: .5em;
 		border-radius: var(--border-radius-size);
 	}
+
 	margin-bottom: 4em;
+
 	&:last-of-type {
 		margin-bottom: 1em;
 	}
+
 	.title {
 		line-height: var(--line-height-small);
+
 		a {
 			color: var(--text-color);
 			font-weight: var(--font-weight-normal);
+
 			&:hover {
 				color: var(--text-color-dark);
 			}
 		}
 	}
+
 	.meta {
 		font-size: var(--font-size-small);
 		color: var(--text-color);
 		line-height: var(--line-height-small);
 		margin-bottom: 1em;
+
 		.date {
 			margin-right: .5em;
 		}
+
 		.tags {
 			a {
 				display: inline-block;
@@ -145,6 +154,7 @@ iframe {
 				border-radius: 1em;
 				margin-right: .3em;
 				margin-bottom: .2em;
+
 				&:hover {
 					background-color: var(--light-color-darker);
 					color: var(--text-color);
@@ -167,33 +177,40 @@ iframe {
 }
 
 form {
+
 	input,
 	textarea {
 		font-family: 'Chivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 		font-weight: var(--font-weight-normal);
+
 		@media (max-width: @breakpoint-desktop) {
 			font-size: var(--font-size-mobile);
 			width: 100%;
 		}
+
 		@media (min-width: @breakpoint-desktop) {
 			font-size: var(--font-size-regular);
 		}
+
 		line-height: var(--line-height-small);
 		color: var(--text-color);
 		max-width: 100%;
 		padding: .65em .8em;
 		border: 1px solid var(--text-color-light);
-		&:focus,
-		&:focus {
+
+		&:focus-visible {
 			outline: none;
 			border-color: var(--accent-color);
-		} // Indicate invalid and not-empty fields:
+		}
 	}
+
+	// Indicate invalid and not-empty fields:
 	input:invalid:not([value=""]),
 	input:-moz-ui-invalid:not([value=""]) {
 		border-color: red;
 		color: red;
 	}
+
 	input[type=submit] {
 		.link-button();
 	}
@@ -203,15 +220,18 @@ form {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
 	.previous,
 	.next {
 		a {
 			.link-button();
 		}
 	}
+
 	.previous {
 		margin-right: .5em;
 	}
+
 	.next {
 		margin-left: .5em;
 	}
@@ -222,13 +242,16 @@ form {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
 	.gallery-item {
 		width: 20%;
+
 		.gallery-icon {
 			img {
 				border-radius: var(--border-radius-size);
 			}
 		}
+
 		.gallery-caption {
 			font-weight: var(--font-weight-normal);
 			font-size: var(--font-size-small);
@@ -237,8 +260,10 @@ form {
 			margin: 0;
 		}
 	}
+
 	br {
 		display: none; // nobody likes you.
+
 		&:last-of-type {
 			display: block;
 		}
@@ -247,6 +272,7 @@ form {
 
 .wp-caption {
 	max-width: 100%;
+
 	.wp-caption-text {
 		font-size: var(--font-size-small);
 		font-weight: var(--font-weight-normal);
@@ -267,6 +293,7 @@ form {
 	position: absolute !important;
 	width: 1px;
 	word-wrap: normal !important;
+
 	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
 	&:focus {
 		background-color: #eee;
@@ -281,7 +308,7 @@ form {
 		text-decoration: none;
 		top: 5px;
 		width: auto;
-		z-index: 100000;
 		/* Above WP toolbar. */
+		z-index: 100000;
 	}
 }
