@@ -6,11 +6,13 @@
 	padding: .3em .8em;
 	color: var(--accent-color);
 	font-weight: var(--font-weight-normal);
-	&:hover, &:focus:hover {
+
+	&:hover {
 		background-color: var(--light-color-dark);
 		cursor: pointer;
 	}
-	&:focus {
+
+	&:focus-visible {
 		border-color: var(--accent-color-light);
 		outline: 2px solid var(--accent-color-dark);
 	}
