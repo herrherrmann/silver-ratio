@@ -1,18 +1,18 @@
 .link-button() {
 	display: inline-block;
 	background-color: transparent;
-	border: 2px solid @accent-color;
-	border-radius: @border-radius-size;
+	border: 2px solid var(--accent-color);
+	border-radius: var(--border-radius-size);
 	padding: .3em .8em;
-	color: @accent-color;
-	font-weight: @font-weight-normal;
+	color: var(--accent-color);
+	font-weight: var(--font-weight-normal);
 	&:hover, &:focus:hover {
-		border: 2px solid @accent-color-dark;
-		background-color: @accent-color-dark;
-		color: @site-background-color;
+		border: 2px solid var(--accent-color-dark);
+		background-color: var(--accent-color-dark);
+		color: var(--site-background-color);
 		cursor: pointer;
 	}
 	&:focus {
-		outline: @accent-color auto 2px;
+		outline: var(--accent-color) auto 2px;
 	}
 }

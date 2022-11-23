@@ -1,9 +1,12 @@
-@footer-margin: .5em;
+// TODO: Migrate to CSS variable
 
 .footer {
-	border-top: 1px solid @text-color-lighter;
+	--footer-margin: .5em;
+
+	border-top: 1px solid var(--text-color-lighter);
 	margin-top: 2em;
 	padding-top: 1em;
+
 	.menu {
 		display: flex;
 		flex-direction: row;
@@ -11,21 +14,26 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+
 		.menu-item {
-			margin-right: @footer-margin;
+			margin-right: var(--footer-margin);
+
 			@media screen and (max-width: @breakpoint-desktop) {
 				margin-bottom: .5em;
 			}
+
 			a {
-				color: @text-color-light;
-				font-weight: @font-weight-normal;
+				color: var(--text-color-light);
+				font-weight: var(--font-weight-normal);
+
 				&:hover {
-					color: @text-color;
+					color: var(--text-color);
 				}
 			}
+
 			&.divider {
-				padding-left: @footer-margin;
-				border-left: 1px solid @text-color-lighter;
+				padding-left: var(--footer-margin);
+				border-left: 1px solid var(--text-color-lighter);
 			}
 		}
 	}

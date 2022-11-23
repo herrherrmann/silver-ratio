@@ -10,7 +10,7 @@ ul:not(.blocks-gallery-grid) {
 	list-style-type: disc;
 	margin: 0 0 .75em 0;
 	padding: 0 0 0 0.9em;
-	line-height: @line-height-default;
+	line-height: var(--line-height-default);
 	ul {
 		padding: 0 0 0 0.9em;
 	}
@@ -19,20 +19,20 @@ ul:not(.blocks-gallery-grid) {
 blockquote {
 	margin: 1em 0;
 	padding: 0 1em;
-	color: @text-color;
-	border-left: 1px solid @text-color-light;
+	color: var(--text-color);
+	border-left: 1px solid var(--text-color-light);
 }
 
 code {
 	font-family: monospace;
-	background-color: @accent-color-light;
+	background-color: var(--accent-color-light);
 	padding: .2em .3em;
-	border-radius: @border-radius-size;
+	border-radius: var(--border-radius-size);
 }
 
 /* Images */
 img {
-	border-radius: @border-radius-size;
+	border-radius: var(--border-radius-size);
 	max-width: 100%;
 	height: auto;
 }
@@ -90,8 +90,8 @@ a {
 
 		figcaption {
 			width: 100%;
-			color: @text-color-light;
-			font-size: @font-size-small;
+			color: var(--text-color-light);
+			font-size: var(--font-size-small);
 			text-align: center;
 			margin: 0.5em 0 0 0;
 		}
@@ -103,33 +103,33 @@ iframe {
 	max-width: 100%;
 	margin-bottom: .75em;
 	border: none;
-	border-radius: @border-radius-size;
+	border-radius: var(--border-radius-size);
 }
 
 .post, .software {
 	&.sticky {
-		background-color: @text-color-lighter;
+		background-color: var(--text-color-lighter);
 		padding: .5em;
-		border-radius: @border-radius-size;
+		border-radius: var(--border-radius-size);
 	}
 	margin-bottom: 4em;
 	&:last-of-type {
 		margin-bottom: 1em;
 	}
 	.title {
-		line-height: @line-height-small;
+		line-height: var(--line-height-small);
 		a {
-			color: @text-color;
-			font-weight: @font-weight-normal;
+			color: var(--text-color);
+			font-weight: var(--font-weight-normal);
 			&:hover {
-				color: @text-color-dark;
+				color: var(--text-color-dark);
 			}
 		}
 	}
 	.meta {
-		font-size: @font-size-small;
-		color: @text-color;
-		line-height: @line-height-small;
+		font-size: var(--font-size-small);
+		color: var(--text-color);
+		line-height: var(--line-height-small);
 		margin-bottom: 1em;
 		.date {
 			margin-right: .5em;
@@ -138,16 +138,16 @@ iframe {
 			a {
 				display: inline-block;
 				white-space: nowrap;
-				font-weight: @font-weight-normal;
+				font-weight: var(--font-weight-normal);
 				padding: .2em .8em;
 				background-color: darken(@site-background-color, 5%);
-				color: @text-color;
+				color: var(--text-color);
 				border-radius: 1em;
 				margin-right: .3em;
 				margin-bottom: .2em;
 				&:hover {
 					background-color: darken(@site-background-color, 10%);
-					color: @text-color;
+					color: var(--text-color);
 				}
 			}
 		}
@@ -159,34 +159,34 @@ iframe {
 }
 
 .info {
-	font-size: @font-size-small;
+	font-size: var(--font-size-small);
 	margin: 1em 0;
 	padding: .65em .8em;
-	border: 1px solid @text-color;
-	border-radius: @border-radius-size;
+	border: 1px solid var(--text-color);
+	border-radius: var(--border-radius-size);
 }
 
 form {
 	input,
 	textarea {
 		font-family: 'Chivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-		font-weight: @font-weight-normal;
+		font-weight: var(--font-weight-normal);
 		@media (max-width: @breakpoint-desktop) {
-			font-size: @font-size-mobile;
+			font-size: var(--font-size-mobile);
 			width: 100%;
 		}
 		@media (min-width: @breakpoint-desktop) {
-			font-size: @font-size-regular;
+			font-size: var(--font-size-regular);
 		}
-		line-height: @line-height-small;
-		color: @text-color;
+		line-height: var(--line-height-small);
+		color: var(--text-color);
 		max-width: 100%;
 		padding: .65em .8em;
-		border: 1px solid @text-color-light;
+		border: 1px solid var(--text-color-light);
 		&:focus,
 		&:focus {
 			outline: none;
-			border-color: @accent-color;
+			border-color: var(--accent-color);
 		} // Indicate invalid and not-empty fields:
 	}
 	input:invalid:not([value=""]),
@@ -226,12 +226,12 @@ form {
 		width: 20%;
 		.gallery-icon {
 			img {
-				border-radius: @border-radius-size;
+				border-radius: var(--border-radius-size);
 			}
 		}
 		.gallery-caption {
-			font-weight: @font-weight-normal;
-			font-size: @font-size-small;
+			font-weight: var(--font-weight-normal);
+			font-size: var(--font-size-small);
 			text-align: center;
 			padding: 0;
 			margin: 0;
@@ -248,10 +248,10 @@ form {
 .wp-caption {
 	max-width: 100%;
 	.wp-caption-text {
-		font-size: @font-size-small;
-		font-weight: @font-weight-normal;
+		font-size: var(--font-size-small);
+		font-weight: var(--font-weight-normal);
 		text-align: center;
-		color: @text-color-light;
+		color: var(--text-color-light);
 		margin-top: 0;
 	}
 }
