@@ -1,16 +1,23 @@
+@breakpoint-desktop: 800px;
+
 @text-color: #3b3b3b;
 @accent-color: #7e00ff;
-@site-background-color: #f4f4f4;
-@breakpoint-desktop: 800px;
+@light-color: #f4f4f4;
+
+@light-color-dark-mode: #3b3b3b;
+@text-color-dark-mode: #efefef;
+@accent-color-dark-mode: #c285ff;
 
 :root {
 	// Colors
-	--site-background-color: @site-background-color;
+	--light-color: @light-color;
+	--light-color-dark: darken(@light-color, 5%);
+	--light-color-darker: darken(@light-color, 10%);
 	--text-color: #3b3b3b;
 	--text-color-light: lighten(@text-color, 35%);
 	--text-color-lighter: lighten(@text-color, 50%);
 	--text-color-dark: #000;
-	--accent-color: #7e00ff;
+	--accent-color: @accent-color;
 	--accent-color-light: lighten(@accent-color, 40%);
 	--accent-color-dark: darken(@accent-color, 20%);
 	--selection-color: fade(@accent-color, 10%);
@@ -28,4 +35,18 @@
 	--line-height-small: 1.25;
 	// Misc.
 	--border-radius-size: 2px;
+
+	@media (prefers-color-scheme: dark) {
+		--light-color: @light-color-dark-mode;
+	    --light-color-dark: lighten(@light-color-dark-mode, 10%);
+	    --light-color-darker: lighten(@light-color-dark-mode, 5%);
+        --text-color: @text-color-dark-mode;
+        --text-color-light: darken(@text-color-dark-mode, 10%);
+        --text-color-lighter: darken(@text-color-dark-mode, 20%);
+        --text-color-dark: lighten(@text-color-dark-mode, 20%);
+        --accent-color: @accent-color-dark-mode;
+        --accent-color-light: lighten(@accent-color-dark-mode, 40%);
+        --accent-color-dark: darken(@accent-color-dark-mode, 20%);
+        --selection-color: fade(@accent-color-dark-mode, 10%);
+	}
 }
