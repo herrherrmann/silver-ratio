@@ -3,15 +3,18 @@
 	flex-direction: row;
 	word-break: break-word;
 	margin-bottom: 1em;
+
 	&:first-of-type {
 		margin-top: 1em;
 	}
+
 	.cover {
 		min-width: 100px;
 		width: 100px;
 		max-width: 100px;
 		height: 100px;
 		max-height: 100px;
+
 		img {
 			width: 100px;
 			height: auto;
@@ -19,6 +22,7 @@
 			border-radius: var(--border-radius-size);
 		}
 	}
+
 	.meta {
 		display: flex;
 		flex-direction: column;
@@ -26,13 +30,17 @@
 		align-items: flex-start;
 		font-weight: var(--font-weight-normal);
 		padding-left: 1em;
+
 		.meta-info {
 			margin-bottom: .5em;
+
 			.title {
 				display: block;
 			}
+
 			.year {
 				display: block;
+
 				p {
 					margin: 0;
 					padding: 0;
@@ -42,6 +50,7 @@
 				}
 			}
 		}
+
 		a.download-link {
 			.link-button();
 		}
@@ -51,11 +60,14 @@
 .download-document {
 	width: 100%;
 	margin: .5em 0;
+
 	.download-link {
 		.link-button();
 	}
+
 	.download-description {
 		padding: 0 .5em;
+
 		p {
 			font-size: var(--font-size-small);
 			display: block;
