@@ -23,14 +23,14 @@
 	</div>
 
 	<?php
-        $args = array(
-          'before'           => '<div class="page-links">' . __( 'Pages:', 'silver-ratio' ),
-          'after'            => '</div>',
-          'nextpagelink'     => __( 'Next page', 'silver-ratio' ),
-          'previouspagelink' => __( 'Previous page', 'silver-ratio' )
-        );
-        wp_link_pages( $args );
-    ?>
+		$args = array(
+			'before'           => '<div class="page-links">' . __( 'Pages:', 'silver-ratio' ),
+			'after'            => '</div>',
+			'nextpagelink'     => __( 'Next page', 'silver-ratio' ),
+			'previouspagelink' => __( 'Previous page', 'silver-ratio' )
+		);
+		wp_link_pages( $args );
+	?>
 </article>
 
 

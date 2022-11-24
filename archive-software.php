@@ -8,10 +8,10 @@
 </article>
 
 <?php $loop = new WP_Query( array(
-      'post_type'      => 'software',
-      'posts_per_page' => 10,
-      'order'          => 'DESC'
-    )); ?>
+		'post_type'      => 'software',
+		'posts_per_page' => 10,
+		'order'          => 'DESC'
+	)); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

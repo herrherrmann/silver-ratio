@@ -8,5 +8,5 @@ A responsive and simple, pretty much minimalist, theme for WordPress.
 
 ## Development
 
-    npm install
-    npm start
+	npm install
+	npm start

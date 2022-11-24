@@ -41,10 +41,10 @@ add_action( 'init', 'silver_ratio_menus' );
 
 function silver_ratio_widgets() {
 	register_sidebar( array(
-        'name' => __( 'Main Sidebar', 'silver-ratio' ),
-        'id' => 'sidebar',
-        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'silver-ratio' ),
-    ) );
+		'name' => __( 'Main Sidebar', 'silver-ratio' ),
+		'id' => 'sidebar',
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'silver-ratio' ),
+	) );
 }
 add_action( 'widgets_init', 'silver_ratio_widgets' );
 
