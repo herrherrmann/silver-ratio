@@ -4,20 +4,25 @@
 	@media screen and (max-width: @breakpoint-desktop) {
 		margin-bottom: .5em;
 	}
+
 	@media screen and (min-width: @breakpoint-desktop) {
 		margin-bottom: 2em;
 	}
+
 	a {
 		font-family: 'Cantata One', serif;
 		font-weight: var(--font-weight-normal);
 		color: var(--text-color);
+
 		&:hover {
 			color: var(--accent-color);
 			text-decoration: none;
 		}
+
 		@media screen and (max-width: @breakpoint-desktop) {
 			font-size: var(--font-size-title-small);
 		}
+
 		@media screen and (min-width: @breakpoint-desktop) {
 			font-size: var(--font-size-title);
 		}
@@ -28,13 +33,16 @@
 	@media screen and (max-width: @breakpoint-desktop) {
 		margin-bottom: .5em;
 	}
+
 	@media screen and (min-width: @breakpoint-desktop) {
 		width: 220px;
 		min-width: 220px;
 	}
+
 	.menu {
 		display: flex;
 		list-style: none;
+
 		@media screen and (max-width: @breakpoint-desktop) {
 			font-size: var(--font-size-menu-big);
 			flex-direction: row;
@@ -44,23 +52,28 @@
 			margin: 0 0 .5em 0;
 			padding: 0 0 .5em 0;
 		}
+
 		@media screen and (min-width: @breakpoint-desktop) {
 			font-size: var(--font-size-menu);
 			flex-direction: column;
 			margin: 0;
 			padding: 0;
 		}
+
 		.menu-item {
 			a {
 				color: var(--text-color);
 				font-weight: var(--font-weight-bold);
+
 				&:hover {
 					color: var(--text-color-dark);
 				}
+
 				@media screen and (max-width: @breakpoint-desktop) {
 					margin-right: .5em;
 				}
 			}
+
 			&.current-menu-item {
 				a {
 					color: var(--accent-color);
@@ -68,9 +81,11 @@
 			}
 		}
 	}
+
 	.widget {
 		padding: 0 2em 0 0;
 		list-style: none;
+
 		ul {
 			list-style: none;
 			padding: 0;
