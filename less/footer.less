@@ -1,12 +1,14 @@
 .footer {
-	--footer-margin: .5em;
+	--footer-margin: .75em;
 
-	border-top: 1px solid var(--text-color-lighter);
 	margin-top: 2em;
-	padding: 1em var(--page-padding) 1.5em var(--page-padding);
+	padding: 2em var(--page-padding);
+	background-color: var(--footer-background-color);
 
-	@media (min-width: @breakpoint-desktop) {
-		padding: 1em 0 0 0;
+	.menu-footer {
+		width: 100%;
+		max-width: var(--page-max-width);
+		margin: 0 auto;
 	}
 
 	.menu {
@@ -26,17 +28,18 @@
 			}
 
 			a {
-				color: var(--text-color-light);
+				color: var(--footer-text-color);
 				font-weight: var(--font-weight-normal);
 
 				&:hover {
-					color: var(--text-color);
+					color: var(--footer-text-color-hover);
+					text-decoration: underline;
 				}
 			}
 
 			&.divider {
 				padding-left: var(--footer-margin);
-				border-left: 1px solid var(--text-color-lighter);
+				border-left: 1px solid var(--footer-text-color);
 			}
 		}
 	}

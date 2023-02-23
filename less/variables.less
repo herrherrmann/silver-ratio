@@ -24,6 +24,7 @@
 
 	// Misc.
 	--border-radius-size: 2px;
+	--page-max-width: 800px;
 	--page-content-max-width: 580px;
 	--page-padding: .75em;
 
@@ -31,7 +32,7 @@
 	--light-color: @light-color;
 	--light-color-dark: darken(@light-color, 5%);
 	--light-color-darker: darken(@light-color, 10%);
-	--text-color: #3b3b3b;
+	--text-color: @text-color;
 	--text-color-light: lighten(@text-color, 35%);
 	--text-color-lighter: lighten(@text-color, 50%);
 	--text-color-dark: #000;
@@ -39,6 +40,9 @@
 	--accent-color-light: lighten(@accent-color, 40%);
 	--accent-color-dark: darken(@accent-color, 20%);
 	--selection-color: fade(@accent-color, 15%);
+	--footer-background-color: @text-color;
+	--footer-text-color: @light-color;
+	--footer-text-color-hover: darken(@light-color, 10%);
 
 	@media (prefers-color-scheme: dark) {
 		--light-color: @light-color-dark-mode;
