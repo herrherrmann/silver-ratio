@@ -22,12 +22,9 @@
 
 .body {
 	display: flex;
+	flex-direction: column;
 
-	@media screen and (max-width: @breakpoint-desktop) {
-		flex-direction: column;
-	}
-
-	@media screen and (min-width: @breakpoint-desktop) {
+	@media (min-width: @breakpoint-desktop) {
 		flex-direction: row;
 	}
 
