@@ -38,8 +38,17 @@
 			}
 
 			&.divider {
-				padding-left: var(--footer-margin);
-				border-left: 1px solid var(--footer-text-color);
+				padding-right: calc(var(--footer-margin) * 2);
+				position: relative;
+
+				::after {
+					display: block;
+					content: "·";
+					position: absolute;
+					top: 0;
+					right: .25em;
+					pointer-events: none;
+				}
 			}
 		}
 	}
