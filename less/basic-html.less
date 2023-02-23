@@ -65,8 +65,12 @@ h1 {
 }
 
 h2 {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin: 1.5em 0 0.3em;
+
+	@media (min-width: @breakpoint-desktop) {
+		font-size: 1.5em;
+	}
 }
 
 h3,
