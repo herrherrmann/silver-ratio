@@ -18,12 +18,13 @@
 			</a>
 		</header>
 		<div class="body">
-			<nav class="sidebar" aria-label="Main Menu">
+			<nav class="main-menu" aria-label="Main menu">
 				<?php wp_nav_menu( array(
 					'theme_location' => 'main-menu',
 					'container'      => false
 				)); ?>
 				<?php if ( dynamic_sidebar('sidebar') ) : else : endif; ?>
 			</nav>
+			<div class="main-menu-divider" aria-hidden="true"></div>
 			<main class="content">
 				<div class="content-inner">
