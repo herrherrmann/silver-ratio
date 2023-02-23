@@ -12,11 +12,9 @@
 	width: 100%;
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 1em .75em .5em .75em;
 
 	@media (min-width: @breakpoint-desktop) {
 		margin: 2em auto var(--font-size-menu) auto;
-		padding: 0;
 	}
 }
 
@@ -29,13 +27,19 @@
 	}
 
 	.content {
-		max-width: 580px;
-
 		&>h2:first-child {
 			margin-top: 0;
 		}
 
 		.content-inner {
+			max-width: var(--page-content-max-width);
+			margin: 0 auto;
+			padding: 0 var(--page-padding);
+
+			@media (min-width: @breakpoint-desktop) {
+				padding: 0;
+			}
+
 			@import 'content';
 		}
 	}

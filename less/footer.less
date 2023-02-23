@@ -3,7 +3,11 @@
 
 	border-top: 1px solid var(--text-color-lighter);
 	margin-top: 2em;
-	padding-top: 1em;
+	padding: 1em var(--page-padding) 1.5em var(--page-padding);
+
+	@media (min-width: @breakpoint-desktop) {
+		padding: 1em 0 0 0;
+	}
 
 	.menu {
 		display: flex;
