@@ -25,5 +25,6 @@
 				)); ?>
 				<?php if ( dynamic_sidebar('sidebar') ) : else : endif; ?>
 			</nav>
+			<div class="main-menu-divider" aria-hidden="true"></div>
 			<main class="content">
 				<div class="content-inner">
