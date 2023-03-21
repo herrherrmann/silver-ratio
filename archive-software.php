@@ -8,9 +8,9 @@
 </article>
 
 <?php $query = new WP_Query( array(
-		'post_type'      => 'software',
-		'nopaging'       => true,
-		'order'          => 'DESC'
+		'post_type' => 'software',
+		'nopaging'  => true,
+		'order'     => 'DESC'
 	)); ?>
 <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
