@@ -9,7 +9,7 @@
 
 <?php $query = new WP_Query( array(
 		'post_type'      => 'software',
-		'posts_per_page' => 10,
+		'nopaging'       => true,
 		'order'          => 'DESC'
 	)); ?>
 <?php while ( $query->have_posts() ) : $query->the_post(); ?>
