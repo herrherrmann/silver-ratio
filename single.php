@@ -26,8 +26,8 @@
 		$args = array(
 			'before'           => '<div class="page-links">' . __( 'Pages:', 'silver-ratio' ),
 			'after'            => '</div>',
-			'nextpagelink'     => __( 'Next page', 'silver-ratio' ),
-			'previouspagelink' => __( 'Previous page', 'silver-ratio' )
+			'nextpagelink'     => __( '← Next page', 'silver-ratio' ),
+			'previouspagelink' => __( 'Previous page →', 'silver-ratio' )
 		);
 		wp_link_pages( $args );
 	?>
@@ -35,8 +35,8 @@
 
 
 <nav class="pagination">
-	<?php previous_post_link( '<div class="previous">%link</div>', __( 'Previous post', 'silver-ratio' ) ); ?>
-	<?php next_post_link(     '<div class="next">%link</div>',     __( 'Next post', 'silver-ratio' ) ); ?>
+	<?php previous_post_link( '<div class="previous">%link</div>', __( '← Previous post', 'silver-ratio' ) ); ?>
+	<?php next_post_link(     '<div class="next">%link</div>',     __( 'Next post →', 'silver-ratio' ) ); ?>
 </nav>
 
 <?php comments_template(); ?>
