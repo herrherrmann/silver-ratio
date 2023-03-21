@@ -3,10 +3,10 @@
 <?php if ( is_tag() ) {
 	$tag = get_queried_object();
 	single_tag_title(
-		'<div class="info">' . __( 'Currently selected tag:', 'silver-ratio' ) . ' <strong>'
+		'<div class="info">' . __( 'Showing posts with the tag ', 'silver-ratio' ) . ' <strong>'
 	);
-	echo '</strong></a></div>';
-}?>
+	echo '</strong>.</a></div>';
+} ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
