@@ -7,12 +7,12 @@
 	<?php show_page_content( 'software-content' ); ?>
 </article>
 
-<?php $loop = new WP_Query( array(
-		'post_type'      => 'software',
-		'posts_per_page' => 10,
-		'order'          => 'DESC'
+<?php $query = new WP_Query( array(
+		'post_type' => 'software',
+		'nopaging'  => true,
+		'order'     => 'DESC'
 	)); ?>
-<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( ! post_password_required() && ! is_attachment() ) : the_post_thumbnail(); endif; ?>
@@ -27,14 +27,5 @@
 </article>
 
 <?php endwhile; ?>
-
-<nav class="pagination">
-	<div class="previous">
-		<?php next_posts_link( __( 'Older projects', 'silver-ratio' ) ); ?>
-	</div>
-	<div class="next">
-		<?php previous_posts_link(  __( 'Newer projects', 'silver-ratio' ) ); ?>
-	</div>
-</nav>
 
 <?php get_footer(); ?>
