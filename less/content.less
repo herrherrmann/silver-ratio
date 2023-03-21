@@ -212,24 +212,23 @@ form {
 	}
 }
 
+.pagination-divider {
+	margin: 1.5em 0;
+	border: none;
+	border-bottom: 2px solid var(--text-color);
+}
+
 .pagination {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	gap: 0.5em;
 
 	.previous,
 	.next {
 		a {
 			.link-button();
 		}
-	}
-
-	.previous {
-		margin-right: .5em;
-	}
-
-	.next {
-		margin-left: .5em;
 	}
 }
 

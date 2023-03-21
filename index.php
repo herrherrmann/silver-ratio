@@ -29,7 +29,7 @@
 
 	<?php if ( ! post_password_required() && ! is_attachment() && has_post_thumbnail() ) {
 		the_post_thumbnail();
-	}?>
+	} ?>
 
 	<div class="content">
 		<?php the_content( __( 'Read more…', 'silver-ratio' ) ); ?>
@@ -39,14 +39,21 @@
 
 <?php endwhile; ?>
 
-<nav class="pagination">
-	<div class="previous">
-		<?php next_posts_link( __( 'Older posts', 'silver-ratio' ) ); ?>
-	</div>
-	<div class="next">
-		<?php previous_posts_link( __( 'Newer posts', 'silver-ratio' ) ); ?>
-	</div>
-</nav>
+<?php
+	$prev_link = get_next_posts_link( __( '← Older posts', 'silver-ratio' ) );
+	$next_link = get_previous_posts_link( __( 'Newer posts →', 'silver-ratio' ) );
+	if ($prev_link || $next_link) :
+?>
+	<hr class="pagination-divider" />
+	<nav class="pagination">
+		<div class="previous">
+			<?php echo $prev_link; ?>
+		</div>
+		<div class="next">
+			<?php echo $next_link; ?>
+		</div>
+	</nav>
+<?php endif; ?>
 
 <?php else : ?>
 <p>
