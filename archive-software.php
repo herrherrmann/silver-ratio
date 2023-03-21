@@ -28,13 +28,4 @@
 
 <?php endwhile; ?>
 
-<nav class="pagination">
-	<div class="previous">
-		<?php next_posts_link( __( 'Older projects', 'silver-ratio' ) ); ?>
-	</div>
-	<div class="next">
-		<?php previous_posts_link(  __( 'Newer projects', 'silver-ratio' ) ); ?>
-	</div>
-</nav>
-
 <?php get_footer(); ?>
