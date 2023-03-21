@@ -32,7 +32,7 @@
 	}?>
 
 	<div class="content">
-		<?php the_content( __( 'Read more...', 'silver-ratio' ) ); ?>
+		<?php the_content( __( 'Read more…', 'silver-ratio' ) ); ?>
 	</div>
 
 </article>
