@@ -213,9 +213,9 @@ form {
 }
 
 .pagination-divider {
-	margin: 1.5em 0;
+	margin-top: 1.5em;
 	border: none;
-	border-bottom: 2px solid var(--text-color);
+	border-bottom: 2px dotted var(--text-color);
 }
 
 .pagination {
@@ -223,12 +223,10 @@ form {
 	flex-direction: row;
 	justify-content: space-between;
 	gap: 0.5em;
+	margin-top: 1.5em;
 
-	.previous,
-	.next {
-		a {
-			.link-button();
-		}
+	a {
+		.link-button();
 	}
 }
 

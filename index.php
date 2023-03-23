@@ -46,12 +46,8 @@
 ?>
 	<hr class="pagination-divider" />
 	<nav class="pagination">
-		<div class="previous">
-			<?php echo $prev_link; ?>
-		</div>
-		<div class="next">
-			<?php echo $next_link; ?>
-		</div>
+		<?php echo $prev_link; ?>
+		<?php echo $next_link; ?>
 	</nav>
 <?php endif; ?>
 
