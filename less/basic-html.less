@@ -78,20 +78,22 @@ h6 {
 }
 
 a {
-	font-weight: var(--font-weight-bold);
+	font-weight: var(--font-weight-normal);
 	word-break: break-word;
 
 	&,
 	&:visited,
 	&:link {
 		color: var(--accent-color);
-		text-decoration: none;
+		text-decoration: underline;
+		text-decoration-color: var(--text-color-lighter);
+		text-underline-offset: .15em;
 	}
 
 	&:active,
 	&:hover {
-		color: var(--accent-color-dark);
-		text-decoration: none;
+		text-decoration: underline;
+		text-decoration-color: var(--accent-color);
 	}
 }
 
