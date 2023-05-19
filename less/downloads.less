@@ -9,17 +9,11 @@
 	}
 
 	.cover {
-		min-width: 100px;
-		width: 100px;
-		max-width: 100px;
+		flex: 0 0 100px;
 		height: 100px;
-		max-height: 100px;
 
-		img {
-			width: 100px;
-			height: auto;
-			max-width: 100%;
-			border-radius: var(--border-radius-size);
+		.wp-post-image {
+			margin: 0;
 		}
 	}
 
@@ -29,18 +23,12 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		font-weight: var(--font-weight-normal);
-		padding-left: 1em;
+		padding-left: .75em;
 
 		.meta-info {
 			margin-bottom: .5em;
 
-			.title {
-				display: block;
-			}
-
-			.year {
-				display: block;
-
+			.description {
 				p {
 					margin: 0;
 					padding: 0;

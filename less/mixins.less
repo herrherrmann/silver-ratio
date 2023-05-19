@@ -1,20 +1,15 @@
 .link-button() {
 	display: inline-block;
-	background-color: var(--light-color);
-	border: 2px solid var(--accent-color);
+	background-color: var(--light-color-dark);
+	border: none;
 	border-radius: var(--border-radius-size);
-	padding: .3em .8em;
+	padding: .35em 1em;
 	color: var(--accent-color);
 	font-weight: var(--font-weight-normal);
 	text-decoration: none;
 
 	&:hover {
-		background-color: var(--light-color-dark);
+		background-color: var(--light-color-darker);
 		cursor: pointer;
-	}
-
-	&:focus-visible {
-		border-color: var(--accent-color-light);
-		outline: 2px solid var(--accent-color-dark);
 	}
 }

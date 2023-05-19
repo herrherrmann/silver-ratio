@@ -18,7 +18,7 @@
 		text-decoration: none;
 
 		&:hover {
-			color: var(--accent-color);
+			color: var(--text-color-dark);
 		}
 
 		@media (min-width: @breakpoint-desktop) {
@@ -72,6 +72,8 @@
 			&.current-menu-item {
 				a {
 					color: var(--accent-color);
+					text-decoration: underline;
+					text-underline-offset: .1em;
 				}
 			}
 		}
