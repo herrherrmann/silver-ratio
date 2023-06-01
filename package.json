@@ -1,6 +1,6 @@
 {
 	"name": "silver-ratio",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"description": "A simple WordPress theme.",
 	"main": "gulpfile.js",
 	"scripts": {
